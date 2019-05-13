@@ -1,4 +1,4 @@
-package com.hazz.kotlinmvp.base
+package com.mvp.base.mvp
 
 
 

@@ -1,4 +1,4 @@
-package com.hazz.kotlinmvp.utils
+package com.core.util
 
 import android.content.Context
 import android.net.ConnectivityManager

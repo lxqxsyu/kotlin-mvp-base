@@ -1,4 +1,4 @@
-package com.hazz.kotlinmvp.base
+package com.mvp.base.mvp
 
 /**
  * 描述：View基础接口定义
