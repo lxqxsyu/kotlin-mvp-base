@@ -13,6 +13,12 @@ android {
         versionName rootProject.ext.android.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -30,9 +36,5 @@ dependencies {
 
     implementation project(":base")
 
-    implementation rootProject.ext.otherLibs
-    //GlideOkHttp
-    implementation(rootProject.ext.glideOkhttp) {
-        exclude group: 'glide-parent'
-    }
+    implementation project(":glideimageview")
 }

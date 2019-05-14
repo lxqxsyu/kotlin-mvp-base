@@ -1,6 +1,7 @@
 package com.mvp.helloworld
 
 import android.app.Application
+import com.mvp.base.BaseInit
 
 /**
  * 描述：
@@ -10,5 +11,13 @@ import android.app.Application
  */
 class CustomeApplication : Application() {
 
+    companion object {
+        lateinit var instance: Application
+    }
 
+    override fun onCreate() {
+        super.onCreate()
+        instance = this
+        BaseInit.init(this)
+    }
 }

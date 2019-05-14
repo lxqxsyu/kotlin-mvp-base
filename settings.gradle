@@ -1,1 +1,1 @@
-include ':app', ':base', ':util'
+include ':app', ':base', ':util', ':multiple-status-view', ':glideimageview'

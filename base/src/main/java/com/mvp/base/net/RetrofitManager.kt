@@ -1,6 +1,6 @@
 package com.mvp.base.net
 
-import com.hazz.kotlinmvp.utils.NetworkUtil
+import com.core.util.NetworkUtil
 import com.mvp.base.BaseInit
 import com.mvp.base.Constants
 import okhttp3.*
@@ -17,16 +17,12 @@ import java.util.concurrent.TimeUnit
  * 作者：水寒
  * 邮箱：lxq_xsyu@163.com
  */
-class RetrofitManager {
-
-    /*    val service: ApiService by lazy (LazyThreadSafetyMode.SYNCHRONIZED){
-        getRetrofit().create(ApiService::class.java)
-    }*/
+object RetrofitManager {
 
     /**
      * 获取Retrofit实例
      */
-    private fun getRetrofit(): Retrofit{
+    fun getRetrofit(): Retrofit{
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
             .client(getOkHttpClient())
