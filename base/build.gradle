@@ -36,6 +36,7 @@ dependencies {
     api rootProject.ext.networkLibs
     // RxJava2
     implementation rootProject.ext.rxJavaLibs
+    api rootProject.ext.rxLefecycleLibs
     //运行时权限
     api 'pub.devrel:easypermissions:2.0.1'
     //多种状态的自定义View

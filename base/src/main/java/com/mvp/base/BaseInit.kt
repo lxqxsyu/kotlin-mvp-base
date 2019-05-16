@@ -2,6 +2,9 @@ package com.mvp.base
 
 import android.app.Application
 import android.content.Context
+import android.util.Log
+import com.core.util.LogUtil
+import com.core.util.toast.ToastUtil
 
 /**
  * 描述：base模块的初始化代码（在application初始化）
@@ -17,5 +20,8 @@ object BaseInit {
     fun init(app: Application){
         this.app = app
         appContext = app.applicationContext
+        //设置日志等级
+        LogUtil.init(null, Log.DEBUG)
+        ToastUtil.initialize(appContext, ToastUtil.Mode.REPLACEABLE)
     }
 }

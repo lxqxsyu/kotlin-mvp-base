@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.trello.rxlifecycle2.components.support.RxFragment
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
@@ -18,7 +19,7 @@ import pub.devrel.easypermissions.EasyPermissions
  * 作者：水寒
  * 邮箱：lxq_xsyu@163.com
  */
-abstract class BaseFragment: Fragment(), EasyPermissions.PermissionCallbacks {
+    abstract class BaseFragment: RxFragment(), EasyPermissions.PermissionCallbacks {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(getLayoutId(),null)

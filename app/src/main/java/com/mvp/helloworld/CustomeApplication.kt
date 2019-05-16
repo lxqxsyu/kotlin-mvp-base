@@ -1,6 +1,7 @@
 package com.mvp.helloworld
 
 import android.app.Application
+import com.jeremyliao.liveeventbus.LiveEventBus
 import com.mvp.base.BaseInit
 
 /**
@@ -19,5 +20,9 @@ class CustomeApplication : Application() {
         super.onCreate()
         instance = this
         BaseInit.init(this)
+        LiveEventBus.get()
+            .config()
+            .supportBroadcast(this)
+            .lifecycleObserverAlwaysActive(true)
     }
 }

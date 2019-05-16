@@ -35,6 +35,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation project(":base")
-
     implementation project(":glideimageview")
+    //基于LiveData的EventBus
+    implementation 'com.jeremyliao:live-event-bus:1.4.2'
 }

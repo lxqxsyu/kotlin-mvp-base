@@ -5,6 +5,7 @@ import android.support.annotation.LayoutRes
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.Toast
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
@@ -14,7 +15,7 @@ import pub.devrel.easypermissions.EasyPermissions
  * 作者：水寒
  * 邮箱：lxq_xsyu@163.com
  */
-abstract class BaseActivity: AppCompatActivity(), EasyPermissions.PermissionCallbacks {
+abstract class BaseActivity: RxAppCompatActivity(), EasyPermissions.PermissionCallbacks {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
